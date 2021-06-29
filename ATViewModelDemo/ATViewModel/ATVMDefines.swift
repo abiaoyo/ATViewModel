@@ -7,12 +7,7 @@
 
 import UIKit
 
-public typealias ATTableRowDidSelectBlock = (_ indexPath:IndexPath,_ rowVM:ATTableRowProtocol?) -> Void
-public typealias ATTableSectionDidSelectBlock = (_ section:Int,_ sectionVM:ATTableSectionProtocol?) -> Void
-
-public typealias ATCollectionItemDidSelectBlock = (_ indexPath:IndexPath,_ itemVM:ATCollectionItemProtocol?) -> Void
-public typealias ATCollectionSectionDidSelectBlock = (_ section:Int,_ sectionVM:ATCollectionSectionProtocol?) -> Void
-
+//MARK: - View
 public protocol ATViewModelProtocol {
     var data:Any? {get set}
     func createLayout()
@@ -21,6 +16,11 @@ public protocol ATViewModelProtocol {
 public protocol ATViewProtocol {
     func configVM(vm:ATViewModelProtocol) -> Void
 }
+
+
+//MARK: - Table
+public typealias ATTableRowDidSelectBlock = (_ indexPath:IndexPath,_ rowVM:ATTableRowProtocol?) -> Void
+public typealias ATTableSectionDidSelectBlock = (_ section:Int,_ sectionVM:ATTableSectionProtocol?) -> Void
 
 public protocol ATTableRowProtocol : ATViewModelProtocol{
     var cellId:String {get set}
@@ -51,6 +51,11 @@ public protocol ATTableHeaderFooterProtocol {
     var sectionVM:ATTableSectionProtocol? {get set}
     func configVM(sectionVM:ATTableSectionProtocol, section:Int) -> Void
 }
+
+
+//MARK: - Collection
+public typealias ATCollectionItemDidSelectBlock = (_ indexPath:IndexPath,_ itemVM:ATCollectionItemProtocol?) -> Void
+public typealias ATCollectionSectionDidSelectBlock = (_ section:Int,_ sectionVM:ATCollectionSectionProtocol?) -> Void
 
 public protocol ATCollectionItemProtocol : ATViewModelProtocol {
     var cellId:String {get set}
@@ -87,7 +92,7 @@ public protocol ATCollectionReuseableViewProtocol {
 
 
 
-
+//MARK: - State
 public protocol ATStateProtocol : NSObjectProtocol{
     func didChangeState(state:String,msg:String?,data:Any?)
 }

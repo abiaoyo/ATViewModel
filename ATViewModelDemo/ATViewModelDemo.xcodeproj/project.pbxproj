@@ -104,9 +104,9 @@
 		186D1D502689D524003AC5DE /* ATViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				186D1D8B268B1131003AC5DE /* View */,
 				186D1D532689D535003AC5DE /* Collection */,
 				186D1D512689D52D003AC5DE /* Table */,
-				186D1D542689D557003AC5DE /* ATViewModel.swift */,
 				186D1D88268B0C15003AC5DE /* ATVMDefines.swift */,
 			);
 			path = ATViewModel;
@@ -153,6 +153,14 @@
 				186D1D7D268B0104003AC5DE /* CollecitonDemoCollectionViewCell.swift */,
 			);
 			path = CollectionDemo;
+			sourceTree = "<group>";
+		};
+		186D1D8B268B1131003AC5DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				186D1D542689D557003AC5DE /* ATViewModel.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
