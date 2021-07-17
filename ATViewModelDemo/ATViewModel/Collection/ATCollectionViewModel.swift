@@ -21,6 +21,10 @@ public class ATCollectionItemViewModel: NSObject, ATCollectionItemProtocol {
     public func createLayout() {
         self.itemSize = CGSize.init(width: UIScreen.main.bounds.width, height: 100)
     }
+    
+    deinit {
+        print("--- deinit \(self.classForCoder) ---")
+    }
 }
 
 public class ATCollectionSectionViewModel: NSObject, ATCollectionSectionProtocol {
@@ -51,6 +55,10 @@ public class ATCollectionSectionViewModel: NSObject, ATCollectionSectionProtocol
         
     }
     
+    deinit {
+        print("--- deinit \(self.classForCoder) ---")
+    }
+    
 }
 
 
@@ -77,6 +85,10 @@ public class ATCollectionViewModel: NSObject {
     
     init(viewProxy:ATCollectionViewProxy) {
         self._viewProxy = viewProxy
+    }
+    
+    deinit {
+        print("--- deinit \(self.classForCoder) ---")
     }
 
     public func refreshState(state:String,msg:String?,data:Any?) -> Void {

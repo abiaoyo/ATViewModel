@@ -23,7 +23,7 @@ public typealias ATTableRowDidSelectBlock = (_ indexPath:IndexPath,_ rowVM:ATTab
 public typealias ATTableSectionDidSelectBlock = (_ section:Int,_ sectionVM:ATTableSectionProtocol?) -> Void
 
 public protocol ATTableRowProtocol : ATViewModelProtocol{
-    var cellId:String {get set}
+    var cellId:String! {get set}
     var rowHeight:CGFloat {get set}
     var selectionStyle:UITableViewCell.SelectionStyle {get set}
     var onDidSelectRowBlock:ATTableRowDidSelectBlock? {get set}
@@ -33,12 +33,13 @@ public protocol ATTableRowProtocol : ATViewModelProtocol{
 }
 
 public protocol ATTableSectionProtocol : ATViewModelProtocol {
-    var rowArray:Array<ATTableRowProtocol> {get set}
+    var rowArray:Array<ATTableRowProtocol>! {get set}
     var headerId:String? {get set}
     var footerId:String? {get set}
     var headerHeight:CGFloat {get set}
     var footerHeight:CGFloat {get set}
 }
+
 
 public protocol ATTableCellProtocol {
     var indexPath:IndexPath? {get set}

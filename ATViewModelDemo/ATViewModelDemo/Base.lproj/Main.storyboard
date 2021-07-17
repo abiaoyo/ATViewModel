@@ -33,6 +33,30 @@
                                     <action selector="clickCollectionDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jub-SW-oWP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqp-zY-TEt">
+                                <rect key="frame" x="191" y="339" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CollectionDemo2"/>
+                                <connections>
+                                    <action selector="clickCollectionExt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qc-2O-Lpg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzX-12-MZr">
+                                <rect key="frame" x="58" y="411" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TableExt"/>
+                                <connections>
+                                    <action selector="clickTableExt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ms5-Rn-mWw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTd-aJ-onU">
+                                <rect key="frame" x="56" y="484" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TableExt2"/>
+                                <connections>
+                                    <action selector="clickTableExt2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6A3-fD-hlB"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXp-rN-Bcw">
                                 <rect key="frame" x="48" y="124" width="166" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

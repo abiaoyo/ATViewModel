@@ -16,9 +16,10 @@ public class ATCollectionReusableView: UICollectionReusableView, ATCollectionReu
     public func configVM(sectionVM: ATCollectionSectionProtocol, indexPath: IndexPath) {
         self.indexPath = indexPath
         self.sectionVM = sectionVM
+        self.refreshSubviews(isKvo: false)
     }
     
-    func refreshSubviews(){
+    func refreshSubviews(isKvo:Bool){
         
     }
 }

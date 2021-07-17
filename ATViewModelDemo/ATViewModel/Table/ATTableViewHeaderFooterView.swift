@@ -16,10 +16,10 @@ public class ATTableViewHeaderFooterView: UITableViewHeaderFooterView, ATTableHe
     public func configVM(sectionVM: ATTableSectionProtocol, section: Int) {
         self.section = section
         self.sectionVM = sectionVM
+        self.refreshSubviews(isKvo: false)
     }
 
-    func refreshSubviews(){
+    public func refreshSubviews(isKvo:Bool) -> Void {
         
     }
-    
 }

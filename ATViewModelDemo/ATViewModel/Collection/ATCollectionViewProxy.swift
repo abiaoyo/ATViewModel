@@ -79,8 +79,8 @@ public class ATCollectionViewProxy: NSObject, UICollectionViewDelegate, UICollec
         let sectionVM = self.getSectionVM(section: indexPath.section)
         if kind ==  UICollectionView.elementKindSectionHeader {
             if let headerId:String = sectionVM.headerId {
-                let header:UICollectionReusableView? = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath)
-                if let _ = header {
+                let header:UICollectionReusableView? = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+                if header != nil {
                     if let _header:ATCollectionReuseableViewProtocol = header as? ATCollectionReuseableViewProtocol {
                         _header.configVM(sectionVM: sectionVM, indexPath: indexPath)
                     }
@@ -136,9 +136,7 @@ public class ATCollectionViewProxy: NSObject, UICollectionViewDelegate, UICollec
         if itemVM.onDidSelectItemBlock != nil {
             itemVM.onDidSelectItemBlock!(indexPath,itemVM)
         }else{
-            if self.dynamicHandler?.responds(to: #selector(collectionView(_:didSelectItemAt:))) != nil {
-                self.dynamicHandler?.collectionView(collectionView, didSelectItemAt: indexPath)
-            }
+            self.dynamicHandler?.collectionView?(collectionView, didSelectItemAt: indexPath)
         }
     }
     

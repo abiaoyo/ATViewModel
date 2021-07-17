@@ -64,5 +64,14 @@ class ViewController: UIViewController, ATStateProtocol {
         self.textLabel.text = self.viewModel.text
     }
     
+    @IBAction func clickTableExt(_ sender: Any) {
+        
+    }
+    @IBAction func clickTableExt2(_ sender: Any) {
+        
+    }
+    @IBAction func clickCollectionExt(_ sender: Any) {
+        
+    }
 }
 
